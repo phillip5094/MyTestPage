@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>iOS <-> JavaScript</title>
+</head>
+<body>
+    <button type="button" onclick="javaScriptToIOS()">JavaScript -> iOS로 데이터 전달</button>
+    <script>
+        function javaScriptToIOS() {
+            console.log('fasdf')
+            
+            if (window.webkit?.messageHandlers?.serverNotification) {
+                console.log('hohoho')
+                window.webkit.messageHandlers.serverNotification.postMessage('hi')
+            } else {
+                console.log('nonono')
+            }
+            
+        }
+    </script>
+</body>
+</html>
+
+
