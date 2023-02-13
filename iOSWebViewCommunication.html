@@ -3,6 +3,16 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <script type="text/javascript" charset="UTF-8"></script>
+    <script type="text/javascript" charset="UTF-8">
+    function javaScriptToIOS() {
+        if (window.webkit?.messageHandlers?.serverNotification) {
+            console.log('hohoho')
+            window.webkit.messageHandlers.serverNotification.postMessage('hi')
+        } else {
+            console.log('nonono')
+        }
+    }
+</script>
     <style>
         .button {
           background-color: #4CAF50;
@@ -21,16 +31,6 @@
 </head>
 <body>
     <button class="button" type="button" onclick="javaScriptToIOS()">JavaScript -> iOS로 데이터 전달</button>
-    <script type="text/javascript" charset="UTF-8">
-        function javaScriptToIOS() {
-            if (window.webkit?.messageHandlers?.serverNotification) {
-                console.log('hohoho')
-                window.webkit.messageHandlers.serverNotification.postMessage('hi')
-            } else {
-                console.log('nonono')
-            }
-        }
-    </script>
 </body>
 </html>
 
