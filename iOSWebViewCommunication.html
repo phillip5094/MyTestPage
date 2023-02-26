@@ -4,18 +4,18 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <script type="text/javascript" charset="UTF-8"></script>
     <script type="text/javascript" charset="UTF-8">
-    function javaScriptToIOS() {
-        if (window.webkit?.messageHandlers?.serverEvent) {
-            console.log('Send Event')
-            window.webkit.messageHandlers.serverEvent.postMessage('Hello iOS')
-        } else {
-            console.log('Cannot send event')
+        function javaScriptToIOS() {
+            if (window.webkit?.messageHandlers?.serverEvent) {
+                console.log('Send Event')
+                window.webkit.messageHandlers.serverEvent.postMessage('Hello iOS')
+            } else {
+                console.log('Cannot send event')
+            }
         }
-    }
-        
-    function iOSToJavaScript() {
-        console.log('Event Occurred')
-    }   
+
+        function iOSToJavaScript() {
+            console.log('Event Occurred')
+        }   
     </script>
     <style>
         .button {
