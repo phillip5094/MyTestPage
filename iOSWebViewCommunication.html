@@ -5,11 +5,11 @@
     <script type="text/javascript" charset="UTF-8"></script>
     <script type="text/javascript" charset="UTF-8">
     function javaScriptToIOS() {
-        if (window.webkit?.messageHandlers?.serverNotification) {
-            console.log('hohoho')
-            window.webkit.messageHandlers.serverNotification.postMessage('hi')
+        if (window.webkit?.messageHandlers?.serverEvent) {
+            console.log('Send Event')
+            window.webkit.messageHandlers.serverEvent.postMessage('Hello iOS')
         } else {
-            console.log('nonono')
+            console.log('Cannot send event')
         }
     }
 </script>
