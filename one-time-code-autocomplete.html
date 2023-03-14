@@ -9,12 +9,42 @@
     <br/>
     <br/>
     <br/>
-    <input
+
+    <div class="preference">
+        <label for="cheese">One Time Code</label>
+        <input
         type="text"
         name="auth-token"
         inputmode="numeric"
         pattern="[0-9]*"
         autocomplete="one-time-code"
-    />
+        />
+    </div>
+
+    <br/>
+    <br/>
+    <br/>
+
+    <div class="preference">
+        <label for="cheese">User ID</label>
+        <input id="user-text-field" type="email" autocomplete="username"/>
+        <br/>
+        <label for="cheese">User Password</label>
+        <input id="password-text-field" type="password" autocomplete="current-password"/>
+    </div>
+
+    <br/>
+    <br/>
+    <br/>
+
+    <div class="preference">
+        <label for="cheese">New Password</label>
+        <input id="new-password-text-field" type="password" autocomplete="new-password"/>
+        <br/>
+        <label for="cheese">Confirm Password</label>
+        <input id="confirm-password-text-field" type="password" autocomplete="new-password"/>
+    </div>
+
+
 </body>
 </html>
