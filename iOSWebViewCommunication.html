@@ -24,7 +24,7 @@
                     window.webkit.messageHandlers.sendMessage.postMessage(str)
                 }
                 
-                if (window.myAwesomeApp) {
+                if (isAndroid()) {
                     window.myAwesomeApp.sendMessage(str);
                 }
 
@@ -32,6 +32,10 @@
             clientToServer: (array) =>  {
                 console.log(array)
             }
+        }
+        
+        function isAndroid() {
+           return navigator.userAgent.match(/Android/i)
         }
     </script>
     <style>
