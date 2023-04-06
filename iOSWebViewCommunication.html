@@ -20,8 +20,14 @@
         window.myAwesomeApp = {
             serverToClient: (str) => {
                 console.log(str)
-                window.webkit.messageHandlers.sendMessage.postMessage(str)
-                window.myAwesomeApp.sendMessage(str);
+                if (window.webkit?.messageHandlers?.sendMessage) {
+                    window.webkit.messageHandlers.sendMessage.postMessage(str)
+                }
+                
+                if (window.myAwesomeApp) {
+                    window.myAwesomeApp.sendMessage(str);
+                }
+
             },
             clientToServer: (array) =>  {
                 console.log(array)
